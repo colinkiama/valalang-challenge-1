@@ -12,19 +12,14 @@ public class Challenge1 : Gtk.Application {
         window.title = "r/valalang challenge #1";
 
 
-        Gtk.Label label = new Gtk.Label ("Time since birth:");
-        // window.add (label);
-
-        Gtk.FlowBox flow_box = new Gtk.FlowBox () {
-            orientation = Gtk.Orientation.VERTICAL
-        };
-
         Gtk.Image logo_image = new Gtk.Image.from_resource ("/vala-logo.png");
+        Gtk.Label label = new Gtk.Label ("Time since birth:");
 
-        flow_box.add (logo_image);
-        flow_box.add (label);
+        Gtk.Box box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
+        box.pack_start (logo_image);
+        box.pack_start (label);
 
-        window.add (flow_box);
+        window.add (box);
         window.show_all ();
     }
 
