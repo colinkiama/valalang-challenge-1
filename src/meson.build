@@ -3,6 +3,8 @@ sources = [
 ]
 
 executable('challenge-1',
+  gresource,
   sources,
   dependencies: dependencies,
-  install: true)
+  install: true
+)
